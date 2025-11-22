@@ -7,7 +7,9 @@ app = Flask(__name__)
 
 # load model - path assumes you run this from inside the app/ folder
 model_path = os.path.join('..', 'model', 'best_student_model.pkl')
-model = pickle.load(open('best_student_model.pkl', 'rb'))
+import os
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "best_student_model.pkl")
+model = pickle.load(open(MODEL_PATH, "rb"))
 
 @app.route('/', methods=['GET'])
 def home():
