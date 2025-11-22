@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Performance Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2 class="logo">EduPredict</h2>
+    <ul>
+        <li class="active">Predictor</li>
+        <li>About</li>
+        <li>Team</li>
+        <li>Contact</li>
+    </ul>
+</div>
+
+<div class="main-content">
+
+    <div class="header-banner">
+        <h1>Student Performance Predictor</h1>
+        <p>Enter student details below to get an instant performance prediction.</p>
+    </div>
+
+    <div class="glass-card">
+
+        <form action="/predict" method="POST">
+
+            <div class="input-group">
+                <label>Gender</label>
+                <select name="gender">
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Race / Ethnicity</label>
+                <select name="race">
+                    <option value="group A">Group A</option>
+                    <option value="group B">Group B</option>
+                    <option value="group C">Group C</option>
+                    <option value="group D">Group D</option>
+                    <option value="group E">Group E</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Parental Education</label>
+                <select name="parental_education">
+                    <option value="some high school">Some High School</option>
+                    <option value="high school">High School</option>
+                    <option value="some college">Some College</option>
+                    <option value="associate's degree">Associate's Degree</option>
+                    <option value="bachelor's degree">Bachelor's Degree</option>
+                    <option value="master's degree">Master's Degree</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Lunch Type</label>
+                <select name="lunch">
+                    <option value="standard">Standard</option>
+                    <option value="free/reduced">Free/Reduced</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Test Preparation</label>
+                <select name="test_preparation">
+                    <option value="none">None</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Math Score</label>
+                <input type="number" name="math" min="0" max="100" required>
+            </div>
+
+            <div class="input-group">
+                <label>Reading Score</label>
+                <input type="number" name="reading" min="0" max="100" required>
+            </div>
+
+            <div class="input-group">
+                <label>Writing Score</label>
+                <input type="number" name="writing" min="0" max="100" required>
+            </div>
+
+            <button type="submit" class="glow-btn">Predict Performance</button>
+
+        </form>
+
+        {% if prediction_text %}
+        <div class="prediction-card 
+            {% if 'Low' in prediction_text %}low{% endif %}
+            {% if 'Average' in prediction_text %}average{% endif %}
+            {% if 'High' in prediction_text %}high{% endif %}
+        ">
+            {{ prediction_text }}
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+
+</body>
+</html>

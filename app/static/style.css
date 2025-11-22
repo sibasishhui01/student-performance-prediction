@@ -1,0 +1,218 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+/* Background Gradient */
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 30px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 18px 0;
+    font-size: 17px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 40px 60px;
+    overflow-y: auto;
+    color: white;
+}
+
+/* Header Banner */
+.header-banner {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+}
+
+.header-banner h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.header-banner p {
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+/* Glass Card Form */
+.glass-card {
+    background: rgba(255,255,255,0.12);
+    padding: 30px;
+    border-radius: 18px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 18px;
+}
+
+label {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Stylish modern dropdown */
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+/* Dropdown on focus */
+select:focus {
+    background: rgba(255,255,255,0.28);
+    box-shadow: 0 0 8px rgba(0, 162, 255, 0.7);
+}
+
+/* Dropdown menu options */
+select option {
+    background: #282744;
+    color: #fff;
+    padding: 10px;
+    border: none;
+}
+
+/* Highlighted option */
+select option:checked,
+select option:hover {
+    background: #4e73df;
+    color: #fff;
+}
+
+/* Modern number input styling */
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    appearance: none;
+    -moz-appearance: textfield;
+    transition: 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+/* Remove spin buttons (Chrome/Edge/Safari) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove spin buttons (Firefox) */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Focus effect */
+input[type="number"]:focus {
+    background: rgba(255,255,255,0.28);
+    box-shadow: 0 0 8px rgba(0, 162, 255, 0.7);
+}
+
+/* Button */
+.glow-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    color: white;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: 0 0 12px rgba(0, 162, 255, 0.8);
+}
+
+.glow-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 162, 255, 1);
+}
+
+/* Prediction Card */
+.prediction-card {
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 14px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 18px rgba(255,255,255,0.4);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Colors */
+.low { background: #e74a3b; }
+.average { background: #f6c23e; color: #222; }
+.high { background: #1cc88a; }
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
