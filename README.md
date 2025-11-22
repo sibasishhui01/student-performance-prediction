@@ -1,3 +1,10 @@
+## 🌐 Live Demo
+
+Your project is deployed here:  
+👉 **https://student-performance-prediction-kqwi.onrender.com**
+
+
+
 🎓 Student Performance Prediction — ML + Flask Web App
 
 This project is an end-to-end Machine Learning web application that predicts a student’s academic performance (Low, Average, or High) based on multiple factors such as gender, parental education, lunch type, test preparation, and exam scores.
