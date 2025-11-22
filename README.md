@@ -111,3 +111,8 @@ Average
 High
 
 Result is displayed with a beautifully styled color card
+
+📌 Author
+
+Sibasish
+Computer Science & Engineering (CSE)
